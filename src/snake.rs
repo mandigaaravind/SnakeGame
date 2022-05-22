@@ -31,7 +31,7 @@ struct Block{
     y:i32,
 }
 
-
+#[derive(Clone)]
 pub struct Snake{
     direction:Direction,
     body:LinkedList<Block>,
@@ -133,13 +133,13 @@ impl Snake{
     }
 
      pub fn restore_tail(&mut self){
-        // let c=&self.tail;
-        //   match &self.tail{
-        //        Some(d)=>self.body.push_back(d),
-        //        None=>(),
+        // let c=self.tail;
+        //   match self.tail.unwrap(){
+        //       d=>self.body.push_back(d),
+        //       _=>{},
         //   };
 
-        //   if let Some(d)=c{
+        //   if let d=c{
         //     self.body.push_back(d);
         //   }
 
